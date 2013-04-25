@@ -1,0 +1,38 @@
+package com.tarena.monster;
+
+import android.content.Context;
+
+import com.tarena.monster.engine.Actor;
+
+public class ZombActor extends Actor {
+	// ÆÕÍ¨½©Ê¬
+	public static final int ZOMB_0 = 0;
+	// ´÷Ã±×ÓµÄ½©Ê¬
+	public static final int ZOMB_1 = 1;
+	// ´øÌúÍ°µÄ½©Ê¬
+	public static final int ZOMB_2 = 2;
+
+	// ¾²Ö¹
+	public static final int D_0 = 0;
+	// ÐÐ½ø
+	public static final int D_1 = 1;
+	// Ïú»Ù
+	public static final int D_2 = 2;
+
+	public ZombActor(Context context, int width, int height) {
+		super(context, width, height);
+	}
+
+	public static ZombActor createZombActor(Context context, int type) {
+		ZombActor actor = null;
+		switch (type) {
+		case ZOMB_0:
+			actor = new ZombActor_0(context, 62, 90);
+			break;
+		case ZOMB_1:
+			break;
+		case ZOMB_2:
+		}
+		return actor;
+	}
+}
